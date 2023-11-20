@@ -5,7 +5,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { IMenu, IMenuCategory } from "../interfaces";
 
-import {
+import { 
 	Brightness4 as Brightness4Icon,
 	Brightness7 as Brightness7Icon,
 	Home as HomeIcon,
@@ -17,6 +17,7 @@ import {
 	Help as HelpIcon,
 	CoPresent as CoPresentIcon,
 	ColorLens as ColorLensIcon,
+	CloudUpload as CloudUploadIcon,
 } from '@mui/icons-material';
 
 import { useContext } from "react";
@@ -73,6 +74,14 @@ const getMenu: IMenu[] = [
 		icon: <DnsIcon />,
 		category: Category.Inspection,
 		url: '/domain',
+		needsInternet: true,
+		beta: true,
+	},
+	{
+		name: 'File Share',
+		icon: <CloudUploadIcon />,
+		category: Category.Inspection,
+		url: '/share',
 		needsInternet: true,
 		beta: true,
 	},

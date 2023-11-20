@@ -5,7 +5,7 @@ import Layout from "./theme/layout";
 import { ErrorBoundary } from "./error";
 import {
 	Home, AboutPage, CronConversionPage, DomainToolsHome, HelpPage, InspectionHome,
-	InspectonResultDisplay, StringConversionPage, UnixEpochPage, ColourPickerPage
+	InspectonResultDisplay, StringConversionPage, UnixEpochPage, ColourPickerPage, Filesharing
 } from './pages';
 import { APIContext, ConnectionContext } from './context';
 import { APIAgentType, Agent } from 'libwhatsthis';
@@ -41,6 +41,7 @@ const App = () => {
 								<Route path="inspect" element={<InspectionHome />} />
 								<Route path="inspect/*" element={<InspectonResultDisplay />} />
 								<Route path="domain/*" element={<DomainToolsHome />} />
+								<Route path="share" element={<Filesharing />} />
 								<Route path="colour" element={<ColourPickerPage />} />
 								<Route path="colour/*" element={<ColourPickerPage />} />
 								<Route path="color" element={<Navigate replace to="/colour" />} />
